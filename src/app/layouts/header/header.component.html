@@ -1,0 +1,71 @@
+<!--
+
+<header class="section-header">
+  <section class="header-main border-bottom bg-white">
+    <div class="container-fluid">
+      <div class="row p-2 pt-3 pb-3 d-flex align-items-center">
+        <div class="col-md-2">BankIn App</div>
+        <div class="col-md-8">
+          <div class="d-flex form-inputs">
+            <form [formGroup]="searchFormGroup" autocomplete="off">
+              <input
+                id="searchText"
+                formControlName="searchText"
+                class="form-control"
+                type="text"
+                placeholder="Search any product..."
+                (ngModelChange)="onChangeSearch()"
+              />
+            </form>
+          </div>
+        </div>
+
+        <div class="col-md-2">
+          <div class="d-flex d-none d-md-flex flex-row align-items-center">
+            <span class="shop-bag"><i class="bx bxs-shopping-bag"></i></span>
+            <div class="d-flex flex-column ms-2">
+              <span class="qty">{{infoCart.quantityItem}} Product</span>
+              <span class="fw-bold">${{infoCart.amountTotal}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</header>
+
+<app-home [searchTitle]="currentSearch"></app-home>
+
+-->
+<!-- 
+<app-home [searchTitle]="currentSearch"></app-home>
+
+-->
+
+
+<header class="section-header">
+  <section class="header-main border-bottom bg-white">
+    <div class="container-fluid">
+      <div class="row p-2 pt-3 pb-3 d-flex align-items-center">
+        <div class="col-md-2"><a routerLink="/home"> BankIn App </a></div>
+        <div class="col-md">
+          <div class="d-flex form-inputs">
+          </div>
+        </div>
+
+        <div class="col-md-2">
+          <div class="d-flex d-none d-md-flex flex-row align-items-center">
+            
+            <button class="btn" (click)="viewDtailsCart()">
+              <span class="shop-bag"><i class="bi bi-cart4"></i></span>
+              </button>
+              <div class="d-flex flex-column ms-2">
+                <span class="qty">{{ infoCart.quantityItem }} Producto(s)</span>
+                <span class="fw-bold">&dollar; {{ infoCart.amountTotal }}</span>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</header>
